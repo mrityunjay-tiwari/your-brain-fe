@@ -21,7 +21,8 @@ export function Signin(){
             password : password
         })
 
-        const jwt = response.data.token;
+        const data = response.data as {token : any}
+        const jwt = data.token;
         localStorage.setItem("token", jwt)
         navigate("/dashboard")
         alert('signedin')

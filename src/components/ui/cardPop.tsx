@@ -7,9 +7,9 @@ import { EditIcon } from "../../icons/editIcon";
 
 interface propsType {
   title?: string;
-  description: string;
-  link: string;
-  type: "youtube" | "tweet";
+  description?: string;
+  link?: string;
+  type?: "youtube" | "tweet";
   deleteCard?: () => void;
   open?: boolean;
   onClose?: () => void;
@@ -70,12 +70,12 @@ export function ContentCardPopped({
                     <div className="flex">
                     {type === "tweet" && (
                         <blockquote className="twitter-tweet">
-                        <a href={link.replace("x", "twitter")}></a>
+                        <a href={link?.replace("x", "twitter")}></a>
                         </blockquote>
                     )}
                     {type === "youtube" && (
                         <iframe
-                        src={link.replace("watch", "embed")}
+                        src={link?.replace("watch", "embed")}
                         frameBorder="0"
                         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                         allowFullScreen
