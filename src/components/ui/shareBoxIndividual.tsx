@@ -59,7 +59,7 @@ export function ShareBoxIndividual({open, onClose,contentId, contentIdSetfn}: pr
         console.log(data);
         console.log(data.hash);
         
-        setLinktoShare(`localhost:5173/shareone/${data.hash}`)
+        setLinktoShare(`https://yourbrain.vercel.app/shareone/${data.hash}`)
         // console.log("link to shareLink", newLink);
         // console.log(data.individualSharableLink);
         // console.log("data.hash",data.hash);
