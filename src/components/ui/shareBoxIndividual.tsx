@@ -8,6 +8,7 @@ import axios from "axios"
 import { TickBox } from "./tickBox"
 
 const BACKEND_URL = import.meta.env.VITE_BACKEND_URL;
+const SHARE_URL = import.meta.env.VITE_SHARE_URL;
 
 interface propTypes {
     open: boolean,
@@ -59,7 +60,7 @@ export function ShareBoxIndividual({open, onClose,contentId, contentIdSetfn}: pr
         console.log(data);
         console.log(data.hash);
         
-        setLinktoShare(`https://yourbrain.vercel.app/shareone/${data.hash}`)
+        setLinktoShare(`${SHARE_URL}/shareone/${data.hash}`)
         // console.log("link to shareLink", newLink);
         // console.log(data.individualSharableLink);
         // console.log("data.hash",data.hash);
