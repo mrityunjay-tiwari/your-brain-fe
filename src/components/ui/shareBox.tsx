@@ -8,6 +8,7 @@ import axios from "axios"
 import { TickBox } from "./tickBox"
 
 const BACKEND_URL = import.meta.env.VITE_BACKEND_URL;
+const SHARE_URL = import.meta.env.VITE_SHARE_URL;
 
 interface propTypes {
     open: boolean,
@@ -53,7 +54,7 @@ export function ShareBox({open, onClose}: propTypes) {
         })
         
         const data = response.data as {shareableLink : string, hash: string}
-        setLinktoShare(`localhost:5173/shareall/${data.hash}`)
+        setLinktoShare(`${SHARE_URL}/shareall/${data.hash}`)
         console.log(linktoShare);
         console.log(selectType === setContentType.Yes);
         console.log(data.shareableLink);
