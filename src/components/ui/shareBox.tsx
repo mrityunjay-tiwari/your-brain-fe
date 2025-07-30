@@ -73,7 +73,7 @@ export function ShareBox({open, onClose}: propTypes) {
             <div className="w-screen h-screen bg-slate-700/70 fixed top-0 left-0 justify-center flex z-20">
                 <div className="flex flex-col justify-center items-center">
                     <div className="flex items-center justify-center h-full">
-                        <div className="w-96 p-7 shadow-md border rounded-xl max-h-min bg-white h-2/5">
+                        <div className="w-80 sm:w-96 p-7 shadow-md border rounded-xl max-h-min bg-white h-2/5">
                             <div className="flex justify-between items-center">
                                 <div className="font-medium text-xl">Want to share YourBrain?</div>
                                 <div onClick={onClose}><CloseIcon/></div>

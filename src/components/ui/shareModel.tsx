@@ -1,9 +1,9 @@
 import React, { useRef, useState } from "react"
 import { CloseIcon } from "../../icons/closeIcon"
-import { Button } from "./button"
 import { InputBox } from "./input"
 import { InputCheckbox } from "./inputCheckbox"
 import axios from "axios"
+import { Button2 } from "./button2"
 
 const BACKEND_URL = import.meta.env.VITE_BACKEND_URL;
 
@@ -88,7 +88,7 @@ export function ShareModel({open, onClose, defaulttitle, defaultdescription, def
         {open && <div className="w-screen h-screen bg-slate-700/70 fixed top-0 left-0 justify-center flex z-20" ref={mainref} onClick={closeclick}>
             <div className="flex flex-col justify-center items-center" ref={refer}>
                 
-                <span className="bg-white p-4 px-7 rounded-lg sm:min-w-[450px] shadow-2xl">
+                <span className="bg-white p-4 px-7 sm:rounded-lg rounded-xl min-w-80 sm:min-w-[450px] shadow-2xl">
                     <div className="flex justify-between items-center">
                         <div className="font-medium text-xl">Your Brain</div>
                         <div onClick={onClose}><CloseIcon/></div>
@@ -106,7 +106,7 @@ export function ShareModel({open, onClose, defaulttitle, defaultdescription, def
                     </div>
 
                         <div className="mt-4 justify-items-end" onClick={onClose}>
-                            <Button onclick={submit} variant="secondary" text="Submit"/>
+                            <Button2 onclick={submit} variant="secondary" text="Submit"/>
                         </div>
 
                 </span>
