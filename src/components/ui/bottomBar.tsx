@@ -12,7 +12,7 @@ interface propsType {
     customClassnameYT?: string
 }
 export function BottomBar({seletedRenderX, seletedRenderYoutube, seletedRenderHome}: propsType){
-    return <div className="h-1/6 w-screen bg-white rounded-2xl">
+    return <div className="h-1/6 w-[95vw] bg-white rounded-2xl">
 
             <div className="flex justify-around">
                 <div onClick={seletedRenderHome}><SideBarElement icon={<HomeIcon siz={6} />}  key={0}/></div>

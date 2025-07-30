@@ -180,7 +180,7 @@ export function Dashboard() {
             </div>
         </div>
 
-        <div className="sm:hidden absolute bottom-1">
+        <div className="sm:hidden absolute bottom-1 flex justify-center w-full">
             <BottomBar seletedRenderX={() => {setSelectiveRendering(contentType.tweet)}} seletedRenderYoutube={() => {setSelectiveRendering(contentType.youtube)}} seletedRenderHome={() => {setSelectiveRendering(contentType.home)}} />
         </div>
     </div>
