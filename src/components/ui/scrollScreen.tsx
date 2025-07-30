@@ -59,7 +59,7 @@ export function ScrollPage() {
             </div>
             <div className="inline sm:hidden">
               <img
-              src="https://ik.imagekit.io/mrityunjay/WhatsApp%20Image%202025-07-30%20at%206.23.29%20PM.jpeg?updatedAt=1753880242349"
+              src="https://ik.imagekit.io/mrityunjay/Screenshot%202025-07-30%20194646.png?updatedAt=1753885052735"
               alt="Scroll Effect"
               className=""
               width={1080}

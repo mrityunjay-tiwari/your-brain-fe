@@ -42,8 +42,8 @@ export function LandingPage() {
             <FeaturesPage />
         </div>
         <div className="h-auto py-24 w-screen flex flex-col justify-center items-center gap-10 bg-gradient-to-bl from-sky-100 to-white">
-            <div className="text-4xl font-semibold">Frequently Asked<span className="font-light text-sky-500"> Questions</span></div>
-            <div className="w-1/2"><AccordionUsage /></div>
+            <div className="text-3xl sm:text-4xl font-semibold px-4 sm:px-0 text-center">Frequently Asked<span className="font-light text-sky-500"> Questions</span></div>
+            <div className="w-[80vw] sm:w-1/2"><AccordionUsage /></div>
         </div>
         <div className="h-1/6 w-screen">
             <Footer />
