@@ -11,13 +11,13 @@ interface ButtonProps {
 
 const variantStyle = {
   primary:
-    "bg-[#dee3fb] text-[#4C5FD5] font-medium rounded px-3.5 py-1.5 flex items-center gap-1 hover:-translate-y-0.5 hover:scale-105 transition-all ",
+    "bg-[#dee3fb] text-[#4C5FD5] font-medium rounded px-1 py-1 sm:px-3.5 sm:py-1.5 flex items-center gap-1 hover:-translate-y-0.5 hover:scale-105 transition-all",
   secondary:
-    "bg-[#4844D7] text-white font-medium rounded px-3.5 py-1.5 flex items-center gap-1 hover:-translate-y-0.5 hover:scale-105 transition-all",
+    "bg-[#4844D7] text-white font-medium rounded px-1 py-1 sm:px-3.5 sm:py-1.5 flex items-center gap-1 hover:-translate-y-0.5 hover:scale-105 transition-all",
 }
 
 
 
 export const Button = (props : ButtonProps) => {
-    return <button className={`${variantStyle[props.variant]}`} onClick={props.onclick}>{props.startIcon} {props.text} {props.endIcon} </button>
+    return <button className={`${variantStyle[props.variant]}`} onClick={props.onclick}>{props.startIcon} <span className="hidden sm:inline">{props.text}</span> {props.endIcon} </button>
 }

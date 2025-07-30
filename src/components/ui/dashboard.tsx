@@ -16,6 +16,8 @@ import { ShareBoxIndividual } from "./shareBoxIndividual";
 import { SearchInputBox } from "./searchInputBox";
 import { SearchIconBox } from "./searchIconBox";
 import { useSearchContent } from "../../hooks/useSearchContent";
+import { BottomBar } from "./bottomBar";
+import { Logo } from "../../icons/logo";
 
 const BACKEND_URL = import.meta.env.VITE_BACKEND_URL;
 
@@ -139,17 +141,22 @@ export function Dashboard() {
          (<ShareBoxIndividual open={individualShareDialogBox} onClose={() => {setIndividualShareDialogBox(c => !c)}} contentId={contentId} />
         )}
 
-        <div className="w-1/6 h-full "><SideBar seletedRenderX={() => {setSelectiveRendering(contentType.tweet)}} seletedRenderYoutube={() => {setSelectiveRendering(contentType.youtube)}} seletedRenderHome={() => {setSelectiveRendering(contentType.home)}} customClassname={((selectiveRendering == (contentType.home)) || (selectiveRendering == null)) ? "bg-slate-200" : "bg-white"} customClassnameYT={selectiveRendering == contentType.youtube ? "bg-slate-200" : "bg-white"} customClassnameX={selectiveRendering == contentType.tweet ? "bg-slate-200" : "bg-white"} /></div>
+        <div className="w-1/6 h-full hidden sm:inline ">
+            <SideBar seletedRenderX={() => {setSelectiveRendering(contentType.tweet)}} seletedRenderYoutube={() => {setSelectiveRendering(contentType.youtube)}} seletedRenderHome={() => {setSelectiveRendering(contentType.home)}} customClassname={((selectiveRendering == (contentType.home)) || (selectiveRendering == null)) ? "bg-slate-200" : "bg-white"} customClassnameYT={selectiveRendering == contentType.youtube ? "bg-slate-200" : "bg-white"} customClassnameX={selectiveRendering == contentType.tweet ? "bg-slate-200" : "bg-white"} />
+        </div>
         
-        <div className="flex-1 bg-slate-100 p-6 flex flex-col gap-6 overflow-hidden">
-            <div className="flex gap-4 justify-end items-center">
-                <div className="flex items-center h-10">
+        <div className="flex-1 bg-slate-100 px-2 py-6 sm:p-6 flex flex-col gap-6 overflow-hidden">
+            <div className="flex items-end sm:justify-end justify-between">
+                <div className="inline sm:hidden"><Logo height2={55} width2={55} /></div>
+                <div className="flex gap-3 sm:gap-4 justify-end items-center">
+                <div className="flex items-center h-7 sm:h-10">
                     <SearchInputBox reference={searchInputRef} onEnterPress={handleSearch} /> 
-                    <div onClick={handleSearch} className="h-10"> <SearchIconBox /> </div>
-                </div>
-                <Button text="Share Brain" variant="primary" startIcon={<ShareIcon siz={6}/>} onclick={() => setOpenShareDialogBox(c => !c)} /> 
-                <Button text='Add Content' variant='secondary' startIcon={<PlusIcon siz={6}/>} onclick={() => setOpenModel(c => !c)}/>
-                <UserDropDown siz={10} key={1} opendialogbox={() => setOpenUserDetails(c => !c)}/>
+                    <div onClick={handleSearch} className="h-8 sm:h-10"> <SearchIconBox /> </div>
+                </div>  
+                <Button text="Share Brain" variant="primary" startIcon={<ShareIcon siz={4} siz2={6}/>} onclick={() => setOpenShareDialogBox(c => !c)} /> 
+                <Button text='Add Content' variant='secondary' startIcon={<PlusIcon siz={4} siz2={6}/>} onclick={() => setOpenModel(c => !c)}/>
+                <UserDropDown siz={7} siz2={10} key={1} opendialogbox={() => setOpenUserDetails(c => !c)}/>
+            </div>
             </div>
             <div className="flex flex-col items-end">{openUserDetails && <DropDown />} </div>
             <div className="flex gap-4 overflow-auto h-full">
@@ -173,5 +180,8 @@ export function Dashboard() {
             </div>
         </div>
 
+        <div className="sm:hidden absolute bottom-1">
+            <BottomBar seletedRenderX={() => {setSelectiveRendering(contentType.tweet)}} seletedRenderYoutube={() => {setSelectiveRendering(contentType.youtube)}} seletedRenderHome={() => {setSelectiveRendering(contentType.home)}} />
+        </div>
     </div>
 }

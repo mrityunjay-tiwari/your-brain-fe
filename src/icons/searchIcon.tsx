@@ -1,5 +1,5 @@
 interface propTypes {
-    siz: number
+    siz: number,
 } 
 
 export function SearchIcon({siz} : propTypes){
