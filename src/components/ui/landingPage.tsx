@@ -36,7 +36,7 @@ export function LandingPage() {
         <div>
             <ScrollPage />
         </div>
-        <div className="h-screen w-screen">
+        <div className="h-auto w-screen">
             <FeaturesPage />
         </div>
         <div className="h-auto py-24 w-screen flex flex-col justify-center items-center gap-10 bg-gradient-to-bl from-sky-100 to-white">

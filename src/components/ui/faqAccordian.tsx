@@ -15,10 +15,10 @@ export function AccordionUsage() {
           aria-controls="panel1-content"
           id="panel1-header"
         >
-          <Typography component="span" className="bg-gradient-to-tr from-sky-100 to-white" >Can I save my tweets here ?</Typography>
+          <Typography component="span" className="bg-gradient-to-tr from-sky-100 to-white" >What types of content can I save here?</Typography>
         </AccordionSummary>
         <AccordionDetails className="bg-gradient-to-l from-sky-50 to-white">
-          Yes, you can save your tweets and can ask questions based on them afterwards too
+          Currently you can save Tweets and YouTube Videos, but we are expanding to support other types of contents also
         </AccordionDetails>
       </Accordion>
       <Accordion>
@@ -27,11 +27,10 @@ export function AccordionUsage() {
           aria-controls="panel2-content"
           id="panel2-header"
         >
-          <Typography component="span" className="bg-gradient-to-tr from-sky-100 to-white">Accordion 2</Typography>
+          <Typography component="span" className="bg-gradient-to-tr from-sky-100 to-white">What are all the controls available for me ?</Typography>
         </AccordionSummary>
         <AccordionDetails className="bg-gradient-to-r from-sky-50 to-white">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
-          malesuada lacus ex, sit amet blandit leo lobortis eget.
+         You can edit, delete and share individual or entire data with your friend and can stop sharing whenever you want.
         </AccordionDetails>
       </Accordion>
       <Accordion defaultExpanded>
@@ -40,16 +39,15 @@ export function AccordionUsage() {
           aria-controls="panel3-content"
           id="panel3-header"
         >
-          <Typography component="div" className="bg-gradient-to-tr from-sky-100 to-white">Accordion Actions</Typography>
+          <Typography component="div" className="bg-gradient-to-tr from-sky-100 to-white">Can I search through my database ?</Typography>
         </AccordionSummary>
         <AccordionDetails className="bg-gradient-to-l from-sky-50 to-white">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
-          malesuada lacus ex, sit amet blandit leo lobortis eget.
+          Yes, you can search through your entire database with just few keywords.
         </AccordionDetails>
-        <AccordionActions>
+        {/* <AccordionActions>
           <Button>Cancel</Button>
           <Button>Agree</Button>
-        </AccordionActions>
+        </AccordionActions> */}
       </Accordion>
     </div>
   );

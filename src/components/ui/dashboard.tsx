@@ -132,7 +132,7 @@ export function Dashboard() {
 
     return <div className="h-screen w-screen flex overflow-hidden">
         <ShareModel refer={shareModelRef} mainref={mainRef} open={openModel} onClose={onclose()} />
-        <ShareModel open={editInput} onClose={() => {setEditInput(c=> !c)}} defaulttitle={granularData?.title} defaultdescription={granularData?.description} defaultlink={granularData?.link} contentId={individualContentId} onupdate={() => getIndividualContentfn(individualContentId!)} />
+        <ShareModel open={editInput} onClose={() => {setEditInput(c=> !c)}} contentId={individualContentId} defaultdescription={granularData?.description} defaultlink={granularData?.link} defaulttitle={granularData?.title} onupdate={() => getIndividualContentfn(individualContentId!)} />
         <ContentCardPopped controls={true} open={popCard} onClose={() => {setPopCard(c => !c)}} description={granularData?.description} link={granularData?.link} type={granularData?.type} title={granularData?.title} editContentCard={() => {editInputBoxfn()}} />
         <ShareBox open={openShareDialogBox} onClose={() => {setOpenShareDialogBox(c => !c)}} />
         { individualShareDialogBox && contentId && 
@@ -155,19 +155,19 @@ export function Dashboard() {
             <div className="flex gap-4 overflow-auto h-full">
 
                     {(selectiveRendering == null) && content?.map((ct : propsType) => {
-                    return <ContentCard controls={true} onclickfn={() => {getIndividualContentfn(ct._id)}} description={ct.description} link={ct.link} type={ct.type} title={ct.title} key={ct.description} deleteCard={() => {deletefn(ct._id)}} openShareBox={() => {setContentId(ct._id); setIndividualShareDialogBox(c => !c)}}/>
+                    return <ContentCard controls={true} onclickfn={() => {getIndividualContentfn(ct._id)}} description={ct.description} link={ct.link} type={ct.type} title={ct.title} key={ct._id} deleteCard={() => {deletefn(ct._id)}} openShareBox={() => {setContentId(ct._id); setIndividualShareDialogBox(c => !c)}}/>
                 })}
                     {(selectiveRendering == contentType.home) && content?.map((ct : propsType) => {
-                    return <ContentCard controls={true} onclickfn={() => {getIndividualContentfn(ct._id)}} description={ct.description} link={ct.link} type={ct.type} title={ct.title} key={ct.description} deleteCard={() => {deletefn(ct._id)}} openShareBox={() => {setContentId(ct._id); setIndividualShareDialogBox(c => !c)}}/>
+                    return <ContentCard controls={true} onclickfn={() => {getIndividualContentfn(ct._id)}} description={ct.description} link={ct.link} type={ct.type} title={ct.title} key={ct._id} deleteCard={() => {deletefn(ct._id)}} openShareBox={() => {setContentId(ct._id); setIndividualShareDialogBox(c => !c)}}/>
                 })}
                     {(selectiveRendering === contentType.tweet) && tweets?.map((ct : propsType) => {
-                    return <ContentCard controls={true} onclickfn={() => {getIndividualContentfn(ct._id)}} description={ct.description} link={ct.link} type={ct.type} title={ct.title} key={ct.description} deleteCard={() => {deletefn(ct._id)}} openShareBox={() => {setContentId(ct._id); setIndividualShareDialogBox(c => !c)}}/>
+                    return <ContentCard controls={true} onclickfn={() => {getIndividualContentfn(ct._id)}} description={ct.description} link={ct.link} type={ct.type} title={ct.title} key={ct._id} deleteCard={() => {deletefn(ct._id)}} openShareBox={() => {setContentId(ct._id); setIndividualShareDialogBox(c => !c)}}/>
                 })}
                     {(selectiveRendering === contentType.youtube) && yoututbeContent?.map((ct : propsType) => {
-                    return <ContentCard controls={true} onclickfn={() => {getIndividualContentfn(ct._id)}} description={ct.description} link={ct.link} type={ct.type} title={ct.title} key={ct.description} deleteCard={() => {deletefn(ct._id)}} openShareBox={() => {setContentId(ct._id); setIndividualShareDialogBox(c => !c)}}/>
+                    return <ContentCard controls={true} onclickfn={() => {getIndividualContentfn(ct._id)}} description={ct.description} link={ct.link} type={ct.type} title={ct.title} key={ct._id} deleteCard={() => {deletefn(ct._id)}} openShareBox={() => {setContentId(ct._id); setIndividualShareDialogBox(c => !c)}}/>
                 })}
                     {(selectiveRendering === contentType.searchResults) && searchedContent?.map((ct : propsType) => {
-                    return <ContentCard controls={true} onclickfn={() => {getIndividualContentfn(ct._id)}} description={ct.description} link={ct.link} type={ct.type} title={ct.title} key={ct.description} deleteCard={() => {deletefn(ct._id)}} openShareBox={() => {setContentId(ct._id); setIndividualShareDialogBox(c => !c)}}/>
+                    return <ContentCard controls={true} onclickfn={() => {getIndividualContentfn(ct._id)}} description={ct.description} link={ct.link} type={ct.type} title={ct.title} key={ct._id} deleteCard={() => {deletefn(ct._id)}} openShareBox={() => {setContentId(ct._id); setIndividualShareDialogBox(c => !c)}}/>
                 })}
                 
             </div>

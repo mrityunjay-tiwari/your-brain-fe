@@ -85,7 +85,7 @@ export function ShareBox({open, onClose}: propTypes) {
                             {(selectType === setContentType.Yes) && <div>
                                 <div className="pt-2 flex items-center w-full">
                                 <div className="flex-1">
-                                    <InputBox reference={inputRef} onChange={(e) => setLinktoShare(e.target.value)} defaultvalue={linktoShare} content="Shareable Link"/>
+                                    <InputBox reference={inputRef} onchange={(e) => setLinktoShare(e.target.value)} defaultvalue={linktoShare} content="Shareable Link"/>
                                 </div>
                                 <div onClick={copyLink} className="flex justify-center items-center border-2 border-l-0 rounded-lg p-2 bg-zinc-100 hover:bg-zinc-200 cursor-pointer" >
                                     {copied? <TickBox /> : <CopyBox /> }

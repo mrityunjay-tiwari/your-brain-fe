@@ -53,6 +53,7 @@ export function ShareModel({open, onClose, defaulttitle, defaultdescription, def
     
     async function submit(){
         console.log(`Title - ${title}, description - ${description}, link - ${link} Type - ${type}`);
+        console.log(contentId);
         
         if(contentId){
             await axios.put(`${BACKEND_URL}/api/v1/content/content/${contentId}`,{

@@ -49,7 +49,7 @@ export function ScrollPage() {
         <div className="bg-neutral-900 p-2">
           <div className="bg-neutral-100 rounded-[12px] overflow-hidden">
             <img
-              src="https://ik.imagekit.io/mrityunjay/Screenshot%202025-07-10%20235904.png?updatedAt=1752172203554"
+              src="https://ik.imagekit.io/mrityunjay/Screenshot%202025-07-30%20114911.png?updatedAt=1753857136729"
               alt="Scroll Effect Showcase"
               className="h-full w-full object-cover rounded-lg"
               width={1920}
