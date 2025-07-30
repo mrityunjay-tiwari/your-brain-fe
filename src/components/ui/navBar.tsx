@@ -1,6 +1,5 @@
 import { Link, useNavigate } from "react-router-dom";
 import { Logo } from "../../icons/logo";
-import { Button } from "./button";
 import { Button2 } from "./button2";
 
 export function NavBar(){
