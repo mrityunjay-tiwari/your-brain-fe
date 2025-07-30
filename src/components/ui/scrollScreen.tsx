@@ -34,7 +34,7 @@ export function ScrollPage() {
     <div className="bg-gradient-to-bl from-sky-100 to-white">
     <div
       ref={containerRef}
-      className="h-[100vh] w-full flex flex-col items-center [perspective:1200px] [transform-style:preserve-3d]"
+      className="h-auto sm:h-[100vh] w-full flex flex-col items-center [perspective:1200px] [transform-style:preserve-3d]"
     >
       <motion.div
         style={{
@@ -44,21 +44,32 @@ export function ScrollPage() {
           scale,
           willChange: "transform, opacity"
         }}
-        className="w-[90%] max-w-[1000px] rounded-3xl shadow-2xl border border-neutral-200 overflow-hidden bg-white/70 "
+        className="h-[96.4vh] sm:h-auto w-[90%] max-w-[400px] aspect-[9/16] sm:aspect-auto sm:max-w-[1000px] rounded-3xl shadow-2xl border border-neutral-200 overflow-hidden bg-white/70"
       >
         <div className="bg-neutral-900 p-2">
           <div className="bg-neutral-100 rounded-[12px] overflow-hidden">
-            <img
+            <div className="hidden sm:inline">
+              <img
               src="https://ik.imagekit.io/mrityunjay/Screenshot%202025-07-30%20114911.png?updatedAt=1753857136729"
               alt="Scroll Effect Showcase"
-              className="h-full w-full object-cover rounded-lg"
+              className="h-full w-full object-contain rounded-lg"
               width={1920}
               height={1080}
             />
+            </div>
+            <div className="inline sm:hidden">
+              <img
+              src="https://ik.imagekit.io/mrityunjay/WhatsApp%20Image%202025-07-30%20at%206.23.29%20PM.jpeg?updatedAt=1753880242349"
+              alt="Scroll Effect"
+              className=""
+              width={1080}
+              height={2160}
+            />
+            </div>
           </div>
         </div>
       </motion.div>
-      <h1 className="text-5xl font-bold text-center text-neutral-800 pt-5">
+      <h1 className="text-3xl sm:text-5xl font-bold text-center text-neutral-800 pt-5">
         Your <span className="text-sky-400 font-light">Memory Dashboard</span>
       </h1>
     </div>

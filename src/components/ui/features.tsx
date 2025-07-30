@@ -1,5 +1,5 @@
 export function FeaturesPage(){
-    return <div className="h-full w-full bg-gradient-to-tl from-sky-50 to-white">
+    return <div className="h-full w-full bg-gradient-to-tl from-sky-50 to-white pt-16 sm:pt-0">
         <div className="h-full w-full">
             <div className="gap-5 w-full h-full flex p-2 ">
         <div className="w-1/4 h-full flex flex-col gap-5">

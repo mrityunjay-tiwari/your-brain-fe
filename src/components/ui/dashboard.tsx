@@ -147,7 +147,7 @@ export function Dashboard() {
         
         <div className="flex-1 bg-slate-100 px-2 py-6 sm:p-6 flex flex-col gap-6 overflow-hidden">
             <div className="flex items-end sm:justify-end justify-between">
-                <div className="inline sm:hidden"><Logo height2={55} width2={55} /></div>
+                <div className="inline sm:hidden"><Logo otherBg={true} height2={55} width2={55} /></div>
                 <div className="flex gap-3 sm:gap-4 justify-end items-center">
                 <div className="flex items-center h-7 sm:h-10">
                     <SearchInputBox reference={searchInputRef} onEnterPress={handleSearch} /> 

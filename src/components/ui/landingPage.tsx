@@ -23,17 +23,19 @@ export function LandingPage() {
        
     },[])
     return <div>
-        <div className="h-screen w-screen border p-5 justify-center items-center bg-gradient-to-tl from-sky-100 to-bg-white">
-            <div className="flex justify-center"><NavBar /></div>
-            <div className="flex items-center justify-center pt-10"><img className="w-1/6 h-1/6 drop-shadow-xl" src="https://ik.imagekit.io/mrityunjay/brain-generator-idea-svgrepo-com.svg?updatedAt=1752139837003" /></div>
-            <div className="flex flex-col items-center justify-center gap-6 pt-2">
-                <div className="text-5xl font-bold">Your <span className="text-blue-400 drop-shadow-sm">Second Brain</span></div>
-                <div className="text-3xl font-light">"Custom Save whatever you need to revisit!"</div>
-                <div className="text-xl font-thin">'A smart way to save and retrive, what you may forget otherwise'</div>
+        <div className="h-screen w-screen border p-5 bg-gradient-to-tl from-sky-100 to-bg-white">
+            <div className="flex justify-center pt-2"><NavBar /></div>
+            <div>
+                <div className="flex items-center justify-center pt-10"><img className="w-60 sm:w-1/6 sm:h-1/6 drop-shadow-xl" src="https://ik.imagekit.io/mrityunjay/brain-generator-idea-svgrepo-com.svg?updatedAt=1752139837003" /></div>
+            <div className="flex flex-col items-center justify-center text-center">
+                <div className="text-4xl sm:text-5xl font-bold py-4">Your <span className="text-blue-400 drop-shadow-sm">Second Brain</span></div>
+                <div className="text-xl sm:text-3xl font-light py-1">"Custom Save what you need to revisit!"</div>
+                <div className="text-md sm:text-xl font-thin italic">Smart way to save and retrive, what you may forget otherwise.</div>
             </div>
-            <div className="justify-items-center p-12"><Button2 onclick={signupPage} variant="primary" text="Try Now" endIcon={<RightArrow height={4} width={4} />}/> </div>
-        </div>
-        <div>
+            <div className="justify-items-center p-8"><Button2 onclick={signupPage} variant="primary" text="Try Now" endIcon={<RightArrow height={4} width={4} />}/> </div>
+            </div>
+        </div> 
+        <div className="h-auto">
             <ScrollPage />
         </div>
         <div className="h-auto w-screen">
