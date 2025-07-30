@@ -180,7 +180,7 @@ export function Dashboard() {
             </div>
         </div>
 
-        <div className="sm:hidden absolute bottom-1 flex justify-center w-full">
+        <div className="sm:hidden absolute bottom-7 flex justify-center w-full">
             <BottomBar seletedRenderX={() => {setSelectiveRendering(contentType.tweet)}} seletedRenderYoutube={() => {setSelectiveRendering(contentType.youtube)}} seletedRenderHome={() => {setSelectiveRendering(contentType.home)}} customClassname={`${((selectiveRendering == (contentType.home)) || (selectiveRendering == null)) ? "bg-zinc-200 px-2 rounded-xl" : "bg-white"} transition-all duration-500`} customClassnameYT={`${selectiveRendering == contentType.youtube ? "bg-zinc-200 px-2 rounded-xl" : "bg-white"} transition-all duration-500`} customClassnameX={`${selectiveRendering == contentType.tweet ? "bg-zinc-200 px-2 rounded-xl" : "bg-white"} transition-all duration-500`}  />
         </div>
     </div>
