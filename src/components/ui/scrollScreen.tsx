@@ -44,7 +44,7 @@ export function ScrollPage() {
           scale,
           willChange: "transform, opacity"
         }}
-        className="h-auto sm:h-auto w-[90%] max-w-[400px] aspect-[9/16] sm:aspect-auto sm:max-w-[1000px] rounded-3xl shadow-2xl border border-neutral-200 overflow-hidden bg-white/70"
+        className="h-auto max-h-[96.4vh] sm:h-auto w-[90%] max-w-[400px] aspect-[9/16] sm:aspect-auto sm:max-w-[1000px] rounded-3xl shadow-2xl border border-neutral-200 overflow-hidden bg-white/70"
       >
         <div className="bg-neutral-900 p-2">
           <div className="bg-neutral-100 rounded-[12px] overflow-hidden">
