@@ -36,7 +36,7 @@ export function ShareallPage() {
 
     return <div className="h-screen w-screen flex overflow-hidden">
         {/* params is - {token} */}
-        <div className="w-1/6 h-full">
+        <div className="w-1/6 h-full hidden sm:inline">
             <SideBar />
         </div>
         <div className="flex-1 bg-slate-100 p-6 flex flex-col gap-6 overflow-hidden">
@@ -48,6 +48,7 @@ export function ShareallPage() {
                     return <ContentCard controls={false} description={ct.description} link={ct.link} type={ct.type} title={ct.title} key={ct.description}/>
                 })}
             </div>
+            
         </div>
     </div>
 }

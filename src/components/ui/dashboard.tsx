@@ -133,8 +133,8 @@ export function Dashboard() {
     }
 
     return <div className="h-screen w-screen flex overflow-hidden">
-        <ShareModel refer={shareModelRef} mainref={mainRef} open={openModel} onClose={onclose()} />
-        <ShareModel open={editInput} onClose={() => {setEditInput(c=> !c)}} contentId={individualContentId} defaultdescription={granularData?.description} defaultlink={granularData?.link} defaulttitle={granularData?.title} onupdate={() => getIndividualContentfn(individualContentId!)} />
+        <ShareModel text="YourBrain" refer={shareModelRef} mainref={mainRef} open={openModel} onClose={onclose()} />
+        <ShareModel text="Edit YourBrain" open={editInput} onClose={() => {setEditInput(c=> !c)}} contentId={individualContentId} defaultdescription={granularData?.description} defaultlink={granularData?.link} defaulttitle={granularData?.title} onupdate={() => getIndividualContentfn(individualContentId!)} />
         <ContentCardPopped controls={true} open={popCard} onClose={() => {setPopCard(c => !c)}} description={granularData?.description} link={granularData?.link} type={granularData?.type} title={granularData?.title} editContentCard={() => {editInputBoxfn()}} />
         <ShareBox open={openShareDialogBox} onClose={() => {setOpenShareDialogBox(c => !c)}} />
         { individualShareDialogBox && contentId && 

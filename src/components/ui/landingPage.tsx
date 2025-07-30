@@ -7,6 +7,7 @@ import { FeaturesPage } from "./features";
 import {AccordionUsage} from "./faqAccordian";
 import { Footer } from "./footer";
 import { useEffect } from "react";
+import { Faq } from "./faq";
 
 export function LandingPage() {
     const navigate = useNavigate();
@@ -35,13 +36,16 @@ export function LandingPage() {
             <div className="justify-items-center p-8"><Button2 onclick={signupPage} variant="primary" text="Try Now" endIcon={<RightArrow height={4} width={4} />}/> </div>
             </div>
         </div> 
-        <div className="h-auto">
+        <div>
             <ScrollPage />
         </div>
-        <div className="h-auto w-screen">
+        <div>
+            <Faq />
+        </div>
+        <div className="hidden sm:inline">
             <FeaturesPage />
         </div>
-        <div className="h-auto py-24 w-screen flex flex-col justify-center items-center gap-10 bg-gradient-to-bl from-sky-100 to-white">
+        <div className="h-auto py-20 sm:py-24 w-screen flex flex-col justify-center items-center gap-10 bg-gradient-to-bl from-sky-100 to-white">
             <div className="text-3xl sm:text-4xl font-semibold px-4 sm:px-0 text-center">Frequently Asked<span className="font-light text-sky-500"> Questions</span></div>
             <div className="w-[80vw] sm:w-1/2"><AccordionUsage /></div>
         </div>

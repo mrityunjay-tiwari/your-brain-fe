@@ -17,7 +17,8 @@ interface propsTypes {
     onupdate?: () => void,
     refer?: React.RefObject<HTMLInputElement | null>,
     mainref?: React.RefObject<HTMLInputElement | null>,
-    closeclick?: () => void
+    closeclick?: () => void,
+    text:string
 }
 
 // @ts-ignore
@@ -25,7 +26,7 @@ enum setContentType {
     Twitter= "tweet",
     YouTube = "youtube"
 }
-export function ShareModel({open, onClose, defaulttitle, defaultdescription, defaultlink, contentId, onupdate, refer, mainref,closeclick } : propsTypes){
+export function ShareModel({open, onClose, defaulttitle, defaultdescription, defaultlink, contentId, onupdate, refer, mainref,closeclick,text } : propsTypes){
     const titleRef = useRef<HTMLInputElement>(null);
     const descriptionRef = useRef<HTMLInputElement>(null);
     const linkRef = useRef<HTMLInputElement>(null);
@@ -88,9 +89,9 @@ export function ShareModel({open, onClose, defaulttitle, defaultdescription, def
         {open && <div className="w-screen h-screen bg-slate-700/70 fixed top-0 left-0 justify-center flex z-20" ref={mainref} onClick={closeclick}>
             <div className="flex flex-col justify-center items-center" ref={refer}>
                 
-                <span className="bg-white p-4 px-7 sm:rounded-lg rounded-xl min-w-80 sm:min-w-[450px] shadow-2xl">
+                <span className="bg-white p-4 px-7 sm:rounded-xl rounded-xl min-w-80 sm:min-w-[450px] shadow-2xl">
                     <div className="flex justify-between items-center">
-                        <div className="font-medium text-xl">Your Brain</div>
+                        <div className="font-medium text-xl">{text}</div>
                         <div onClick={onClose}><CloseIcon/></div>
                     </div>
                     <div className="pt-6 flex gap-5 justify-end">
