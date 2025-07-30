@@ -2,7 +2,7 @@ import { useRef } from "react";
 import { Logo } from "../../icons/logo";
 import { InputBox } from "./input";
 import axios from "axios";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { Button2 } from "./button2";
 
 const BACKEND_URL = import.meta.env.VITE_BACKEND_URL;
@@ -37,6 +37,8 @@ export function Signin(){
         <div className="pt-4">
             <Button2 onclick={signin} variant="secondary" text="Submit"/>
         </div>
+        <div className="pt-5"><h1 className="font-thin text-sm">Don't have an account yet? <Link to={'/signup'}> <span className="text-blue-700 font-semibold">Create One!</span></Link> </h1></div>
+
     </div>
     </div>
 }
