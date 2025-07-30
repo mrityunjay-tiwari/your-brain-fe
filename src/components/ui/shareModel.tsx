@@ -88,7 +88,7 @@ export function ShareModel({open, onClose, defaulttitle, defaultdescription, def
         {open && <div className="w-screen h-screen bg-slate-700/70 fixed top-0 left-0 justify-center flex z-20" ref={mainref} onClick={closeclick}>
             <div className="flex flex-col justify-center items-center" ref={refer}>
                 
-                <span className="bg-white p-4 px-7 rounded-lg min-w-[450px] shadow-2xl">
+                <span className="bg-white p-4 px-7 rounded-lg sm:min-w-[450px] shadow-2xl">
                     <div className="flex justify-between items-center">
                         <div className="font-medium text-xl">Your Brain</div>
                         <div onClick={onClose}><CloseIcon/></div>

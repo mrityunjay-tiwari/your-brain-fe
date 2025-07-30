@@ -43,10 +43,10 @@ export function ContentCardPopped({
           <div className="flex flex-col justify-center items-center">
 
                 <div className="flex items-center justify-center h-full">
-                <div className="w-[35rem] p-7 shadow-md border rounded-xl max-h-min bg-white h-4/5 overflow-scroll">
+                <div className="w-[20rem] sm:w-[35rem] p-7 shadow-md border rounded-xl max-h-min bg-white h-4/5 overflow-scroll">
                     <div>
-                        <div className={`flex justify-between items-center mb-2`}>
-                    <div className="gap-2 flex text-2xl items-center">
+                        <div className={`flex justify-between items-start mb-2`}>
+                    <div className="gap-2 flex text-xl sm:text-2xl items-start">
                         <BrainIcon siz={6} />
                         <div className="text-zinc-700 font-medium">
                         {title}
