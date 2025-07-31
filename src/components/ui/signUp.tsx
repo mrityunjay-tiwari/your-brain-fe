@@ -32,9 +32,12 @@ export function Signup(){
         <div className="font-light text-lg sm:text-xl pb-6 flex items-end">SIGnUP TO <Logo height={100} width={100} height2={115} width2={115}/>  </div>
         <div className="w-full">
             <InputBox reference={userNameRef} content="Username"/>
+            <h1 className="text-xs text-red-600 pb-2">*Username must have 3-15 characters.</h1>
             <InputBox reference={emailRef} content="Email"/>
+            <h1 className="text-xs text-red-600 pb-2">*Pasword must have 8-20 characters.</h1>
             <InputBox reference={passwordRef} content="Password"/>
         </div>
+        
         <div className="pt-4">
             <Button2 onclick={signup} variant="secondary" text="Submit"/>
         </div>  
