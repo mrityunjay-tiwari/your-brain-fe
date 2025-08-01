@@ -16,9 +16,23 @@ interface propsType {
     controls?: boolean
 }
 
+
 export function ContentCard({title,description, link, type, deleteCard, onclickfn, openShareBox, controls} : propsType){
     const [deletePopupOpen, setDeletePopupOpen] = useState(false);
     
+
+    // function getVideoLink(link : string) {
+
+    //     let trimmedLink = "";
+
+    //    if(link.includes("youtu.be")) {
+    //         trimmedLink = link.split("/")[1]
+    //     }
+    //     console.log(trimmedLink);
+        
+    //     return `https://www.youtube.com/embed/${trimmedLink}`
+    // }
+
     useEffect(() => {
     const twttr = (window as any).twttr;
     if (type === "tweet" && twttr?.widgets?.load) {
@@ -52,7 +66,7 @@ export function ContentCard({title,description, link, type, deleteCard, onclickf
           )}
           {type === "youtube" && (
             <iframe
-              src={link.replace("watch", "embed")}
+              src={link.replace("https://youtu.be/" , "https://www.youtube.com/embed/")}
               frameBorder="0"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
               allowFullScreen
