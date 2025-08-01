@@ -75,7 +75,7 @@ export function ContentCardPopped({
                     )}
                     {type === "youtube" && (
                         <iframe
-                        src={link?.replace("watch", "embed")}
+                        src={link?.replace("https://youtu.be/", "https://www.youtube.com/embed/")}
                         frameBorder="0"
                         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                         allowFullScreen
